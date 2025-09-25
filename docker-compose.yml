@@ -1,0 +1,8 @@
+services:
+  superset:
+    image: apache/superset:latest
+    environment:
+      - FLASK_ENV=development
+    ports:
+      - "8088:8088"
+    command: ["superset", "run", "-p", "8088", "--with-threads", "--reload", "--debugger"]
